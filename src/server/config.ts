@@ -16,6 +16,10 @@ export const config = {
     clientId: process.env.MASTODON_CLIENT_ID || 'a4T1RiBI4n3QdRBLBqYSZzMksC8PenYfkaQVk-EIgG8',
     clientSecret: process.env.MASTODON_CLIENT_SECRET || '3gouZDHygaIcPvN2psmcsPSMuGZ6pSn1w2en9xPYDB4',
   },
+  facebook: {
+    appId: process.env.FACEBOOK_APP_ID || '',
+    appSecret: process.env.FACEBOOK_APP_SECRET || '',
+  },
   cloudinary: {
     cloudName: process.env.CLOUDINARY_CLOUD_NAME || '',
     apiKey: process.env.CLOUDINARY_API_KEY || '',

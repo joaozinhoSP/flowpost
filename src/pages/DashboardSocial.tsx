@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useToast } from '../components/ui/toast';
 import ConnectMastodon from '../components/ConnectMastodon';
+import ConnectInstagram from '../components/ConnectInstagram';
 import { Plug, Plus, Trash2, Check, X, Globe, RefreshCw, AlertCircle } from 'lucide-react';
 
 interface SocialAccount {
@@ -202,10 +203,17 @@ export default function DashboardSocial() {
         </div>
       )}
 
-      <div className="mt-6">
-        <h3 className="font-semibold text-gray-900 mb-3">Mastodon</h3>
-        <p className="text-xs text-gray-500 mb-3">Conecte sua conta do Mastodon para publicar posts automaticamente.</p>
-        <ConnectMastodon />
+      <div className="mt-6 space-y-4">
+        <div>
+          <h3 className="font-semibold text-gray-900 mb-3">Mastodon</h3>
+          <p className="text-xs text-gray-500 mb-3">Conecte sua conta do Mastodon para publicar posts automaticamente.</p>
+          <ConnectMastodon />
+        </div>
+        <div>
+          <h3 className="font-semibold text-gray-900 mb-3">Instagram</h3>
+          <p className="text-xs text-gray-500 mb-3">Conecte sua conta Instagram Business/Criadora com 1 clique via Facebook.</p>
+          <ConnectInstagram />
+        </div>
       </div>
 
         <div className="mt-8 bg-white rounded-xl border border-gray-200 p-6 shadow-card">

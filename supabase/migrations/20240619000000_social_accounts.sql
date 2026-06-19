@@ -112,6 +112,7 @@ RETURNS TABLE (
   user_id TEXT,
   content TEXT,
   media_urls TEXT[],
+  networks TEXT[],
   hashtags JSONB,
   scheduled_at TIMESTAMPTZ,
   created_at TIMESTAMPTZ
@@ -126,6 +127,7 @@ BEGIN
     p.user_id,
     p.content,
     p.media_urls,
+    p.networks,
     p.hashtags,
     p.scheduled_date AS scheduled_at,
     p.created_at

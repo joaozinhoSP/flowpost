@@ -7,6 +7,7 @@ import postsRouter from './routes/posts';
 import analyticsRouter from './routes/analytics';
 import socialRouter from './routes/social';
 import mastodonRouter from './routes/mastodon';
+import instagramRouter from './routes/instagram';
 import { config } from './config';
 
 const app = express();
@@ -35,6 +36,7 @@ app.use('/api/posts', postsRouter);
 app.use('/api/analytics', analyticsRouter);
 app.use('/api/social', socialRouter);
 app.use('/api', mastodonRouter);
+app.use('/api', instagramRouter);
 
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
